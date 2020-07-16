@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+    <com.example.scroll_viewpager.ScrollableLayout
+        android:id="@+id/sl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@mipmap/home_srarch_bg"
+            />
+
+
+        <!--标头-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            >
+            <RelativeLayout
+                android:id="@+id/ly_page1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:background="#fff"
+             >
+
+                <TextView
+                    android:id="@+id/tv_page1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="商品详情"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13sp"
+                    />
+                <View
+                    android:id="@+id/iv_page1_expand"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorAccent"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ly_page2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:background="#fff"
+             >
+                <TextView
+                    android:id="@+id/tv_page2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="商品配置"
+                    android:textColor="#435356" />
+                <View
+                    android:id="@+id/iv_page2_expand"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorAccent"
+                    android:visibility="invisible"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--viewpager-->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f1f1f1" />
+
+
+
+    </com.example.scroll_viewpager.ScrollableLayout>
+
+
+
+
+</LinearLayout>
